@@ -1,13 +1,37 @@
+
+<!DOCTYPE html>
 <html>
-    <head>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
 
-    </head>
-    <body>
-        <h1> Hola Mundo </h1>
-        <button> Enviar </button>
-    </body>
+    <h1>Login</h1>
 
-    <footer>
+    <label>Usuario:</label><br>
+    <input type="text" id="usuario"><br><br>
 
-    </footer>
-<html>
+    <label>Contraseña:</label><br>
+    <input type="password" id="password"><br><br>
+
+    <button onclick="login()">Ingresar</button>
+
+    <p id="mensaje"></p>
+
+    <script>
+        function login() {
+            let user = document.getElementById("usuario").value;
+            let pass = document.getElementById("password").value;
+
+            if (user === "admin" && pass === "1234") {
+                document.getElementById("mensaje").innerHTML = "Bienvenido";
+            } else {
+                document.getElementById("mensaje").innerHTML = "Error";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
